@@ -1,0 +1,103 @@
+{
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:5040"
+    },
+    "ReRoutes": [
+        {
+            "UpstreamPathTemplate": "/flights/{everything}",
+            "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Patch" ],
+            "DownstreamPathTemplate": "/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5005
+                }
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "",
+                "AllowedScopes": []
+            }
+        },
+        {
+            "UpstreamPathTemplate": "/identity/{everything}",
+            "UpstreamHttpMethod": [ "Get", "Post" ],
+            "DownstreamPathTemplate": "/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5010
+                }
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "",
+                "AllowedScopes": []
+            }
+        },
+        {
+            "UpstreamPathTemplate": "/airplanes/{everything}",
+            "UpstreamHttpMethod": [ "Get", "Post" ],
+            "DownstreamPathTemplate": "/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5015
+                }
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "",
+                "AllowedScopes": []
+            }
+        },
+        {
+            "UpstreamPathTemplate": "/tickets/{everything}",
+            "UpstreamHttpMethod": [ "Get", "Post" ],
+            "DownstreamPathTemplate": "/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5020
+                }
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "",
+                "AllowedScopes": []
+            }
+        },
+        {
+            "UpstreamPathTemplate": "/customers/{everything}",
+            "UpstreamHttpMethod": [ "Get", "Post", "Patch" ],
+            "DownstreamPathTemplate": "/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5025
+                }
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "",
+                "AllowedScopes": []
+            }
+        },
+        {
+            "UpstreamPathTemplate": "/employees/{everything}",
+            "UpstreamHttpMethod": [ "Post" ],
+            "DownstreamPathTemplate": "/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5035
+                }
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "",
+                "AllowedScopes": []
+            }
+        }
+    ]
+}
